@@ -7,8 +7,12 @@
 
 ### New features
 
-- Add `bin/build` context command.
-
 ### Bugfixes
 
 </details>
+
+## v0.1.0
+
+### New features
+
+- Add `bin/build` context command.
