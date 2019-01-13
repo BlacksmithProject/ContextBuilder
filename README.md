@@ -18,16 +18,16 @@ like `make context Delivery`.
 
 This should build:
 
--  src/Domain/Delivery/Action
--  src/Domain/Delivery/Bus
--  src/Domain/Delivery/Entity
--  src/Domain/Delivery/Repository
--  src/Domain/Delivery/ValueObject
--  tests/Domain/Delivery/Action
--  tests/Domain/Delivery/Bus
--  tests/Domain/Delivery/Entity
--  tests/Domain/Delivery/Repository
--  tests/Domain/Delivery/ValueObject
+-  `src/Domain/Delivery/Action`
+-  `src/Domain/Delivery/Bus`
+-  `src/Domain/Delivery/Entity`
+-  `src/Domain/Delivery/Repository`
+-  `src/Domain/Delivery/ValueObject`
+-  `tests/Domain/Delivery/Action`
+-  `tests/Domain/Delivery/Bus`
+-  `tests/Domain/Delivery/Entity`
+-  `tests/Domain/Delivery/Repository`
+-  `tests/Domain/Delivery/ValueObject`
 
 ## Installation
 
