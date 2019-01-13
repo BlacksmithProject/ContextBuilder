@@ -9,6 +9,8 @@
 
 ### Bugfixes
 
+- Update `bin` in `composer.json`
+
 </details>
 
 ## v0.1.0
