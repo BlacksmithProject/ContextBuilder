@@ -35,4 +35,4 @@ This should build:
 
 ## How to use it ?
 
-`./vendor/blacksmith-project/context-builder/build <contextName>`
+`./vendor/bin/build context <contextName>`

@@ -5,9 +5,13 @@
 
 ### BREAKING CHANGES
 
+- Move `bin/build` to `./build`
+
 ### New features
 
 ### Bugfixes
+
+- Update `bin` in `composer.json`
 
 </details>
 

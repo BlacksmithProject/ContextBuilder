@@ -18,7 +18,7 @@
         }
     },
     "bin": [
-        "bin/build"
+        "build"
     ],
     "autoload-dev": {
         "psr-4": {

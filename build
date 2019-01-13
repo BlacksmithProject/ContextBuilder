@@ -5,7 +5,13 @@ declare(strict_types=1);
 use Symfony\Component\Console\Output\OutputInterface;
 use Silly\Application;
 
-require dirname(__DIR__).'/vendor/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+} elseif (file_exists(__DIR__ . '/../autoload.php')) {
+    require_once __DIR__ . '/../autoload.php';
+} else {
+    require_once __DIR__ . '/../../autoload.php';
+}
 
 const MAIN_DIRECTORIES = [
     'src',
@@ -29,7 +35,7 @@ $app->command('context [contextName]', function (?string $contextName, OutputInt
 
     foreach (MAIN_DIRECTORIES as $mainDirectory) {
         $paths = array_map(function (string $folderName) use ($mainDirectory, $contextName) : string {
-            return sprintf('./%s/%s/%s', $mainDirectory, $contextName, $folderName);
+            return sprintf('./%s/Domain/%s/%s', $mainDirectory, $contextName, $folderName);
         }, CONTEXT_DIRECTORIES);
 
         foreach ($paths as $path) {
