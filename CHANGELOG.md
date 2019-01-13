@@ -7,6 +7,8 @@
 
 ### New features
 
+- Add `bin/build` context command.
+
 ### Bugfixes
 
 </details>

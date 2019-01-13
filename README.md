@@ -32,3 +32,5 @@ This should build:
 ## Installation
 
 ## How to use it ?
+
+`./vendor/blacksmith-project/context-builder/build <contextName>`

@@ -1,0 +1,54 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+use Symfony\Component\Console\Output\OutputInterface;
+use Silly\Application;
+
+require dirname(__DIR__).'/vendor/autoload.php';
+
+const MAIN_DIRECTORIES = [
+    'src',
+    'tests',
+];
+
+const CONTEXT_DIRECTORIES = [
+    'Action',
+    'Bus',
+    'Entity',
+    'Repository',
+    'ValueObject',
+];
+
+$app = new Application();
+
+$app->command('context [contextName]', function (?string $contextName, OutputInterface $output) {
+    if (empty($contextName)) {
+        throw new Exception('ContextName must be provided.');
+    }
+
+    foreach (MAIN_DIRECTORIES as $mainDirectory) {
+        $paths = array_map(function (string $folderName) use ($mainDirectory, $contextName) : string {
+            return sprintf('./%s/%s/%s', $mainDirectory, $contextName, $folderName);
+        }, CONTEXT_DIRECTORIES);
+
+        foreach ($paths as $path) {
+            createPath($path);
+            $output->writeln(sprintf('"%s" created.', $path));
+        }
+    }
+});
+
+/**
+ * @throws Exception
+ */
+function createPath(string $pathName): void
+{
+    if (file_exists($pathName)) {
+        throw new Exception('Directory already exists. Did you make a typo in your ContextName ?');
+    }
+
+    mkdir($pathName, 0755, true);
+}
+
+$app->run();
