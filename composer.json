@@ -1,0 +1,28 @@
+{
+    "name": "blacksmith-project/context-builder",
+    "description": "A PHP Library building folder structure for Domain context",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Gomes de Oliveira",
+            "email": "ngdo27@gmail.com"
+        }
+    ],
+    "require": {
+        "mnapoli/silly": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "BSP\\": "src/"
+        }
+    },
+    "bin": [
+        "build"
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "BSP\\Tests\\": "tests/"
+        }
+    }
+}
