@@ -5,15 +5,21 @@
 
 ### BREAKING CHANGES
 
-- Move `bin/build` to `./build`
-
 ### New features
 
 ### Bugfixes
 
-- Update `bin` in `composer.json`
-
 </details>
+
+## v0.2.0
+
+### BREAKING CHANGES
+
+- Move `bin/build` to `./build`
+
+### Bugfixes
+
+- Update `bin` in `composer.json`
 
 ## v0.1.1
 
