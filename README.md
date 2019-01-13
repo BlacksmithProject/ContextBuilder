@@ -31,6 +31,8 @@ This should build:
 
 ## Installation
 
+`composer require blacksmith-project/context-builder`
+
 ## How to use it ?
 
 `./vendor/blacksmith-project/context-builder/build <contextName>`
