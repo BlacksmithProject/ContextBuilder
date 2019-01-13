@@ -31,7 +31,7 @@ This should build:
 
 ## Installation
 
-`composer require blacksmith-project/context-builder`
+`composer require --dev blacksmith-project/context-builder`
 
 ## How to use it ?
 
